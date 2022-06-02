@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/simple-grid.css">
+    <title>apple packet</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="row">
+            <div class="col-12">
+                <h2 class="center-align">Apple Packet Price Planner</h2>
+            </div>
+        </div>
+
+        <div class="message"></div>
+
+        <div class="row ">
+            <!-- <form class="col s12"> -->
+            <div class="input-field  col s2 offset-s2">
+                <!-- <i class="material-icons prefix">account_circle</i> -->
+                <input id="icon_prefix"  type="number" class="validate box center-align" data-length="4" required>
+                <label for="icon_prefix">Box cost price</label>
+            </div>
+            <div class="input-field col s2 offset-s4">
+                <!-- <i class="material-icons prefix">phone</i> -->
+                <input id="icon_telephone" type="number" class="validate boxNum center-align" data-length="4" required>
+                <label for="icon_telephone">apples in a box</label>
+            </div>
+            <div class="input-field col s2 offset-s2">
+                <!-- <i class="material-icons prefix">phone</i> -->
+                <input id="icon_telephone" type="number" class="validate packet center-align" data-length="4" required>
+                <label for="icon_telephone">Packet size</label>
+            </div>
+            <div class="input-field col s2 offset-s4">
+                <!-- <i class="material-icons prefix">phone</i> -->
+                <input id="icon_telephone" type="number" class="validate profit center-align" data-length="4" required>
+                <label for="icon_telephone">Required profit</label>
+            </div>
+            <div class="col s2 offset-s2">
+                <button class="btn waves-effect waves-light"
+                    type="submit" name="action">Submit
+                    <i class="material-icons right">send</i>
+                </button>
+            </div>
+            <!-- </form> -->
+        </div>
+
+    </div>
+
+    </div>
+    <script src="./js/apple.js"></script>
+    <script src="./js/apple.dom.js"></script>
+</body>
+
+</html>
