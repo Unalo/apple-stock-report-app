@@ -1,4 +1,4 @@
-const appleFactory = (data) => {
+const appleFactory = data => {
 
     let boxPrice = 0;
     let numApples = 0;
@@ -8,37 +8,38 @@ const appleFactory = (data) => {
 
     let dataList = [] || data;
 
-    let setBoxPrice = box => { boxPrice = Number(box) }
+    const setBoxPrice = box => { boxPrice = Number(box) };
 
-    let setAppleCount = appleCount => { numApples = Number(appleCount) }
+    const setAppleCount = appleCount => { numApples = Number(appleCount) };
 
-    let setPacketSize = packet => { packetSize = Number(packet) }
+    const setPacketSize = packet => { packetSize = Number(packet) };
 
-    let setProfit = pft => { profit = Number(pft) }
+    const setProfit = pft => { profit = Number(pft) };
 
-    let getBoxPrice = () => { return boxPrice }
+    const getBoxPrice = () => boxPrice;
 
-    let getAppleCount = () => { return numApples }
+    const getAppleCount = () => numApples;
 
-    let getPacketSize = () => { return packetSize }
+    const getPacketSize = () => packetSize;
 
-    let getProfit = () => { return profit }
+    const getProfit = () => profit;
 
-    let appleCost = () => { return (getBoxPrice() / getAppleCount()).toFixed(2) }
+    const appleCost = () => (getBoxPrice() / getAppleCount()).toFixed(2);
 
-    let packet = () => { return (getAppleCount() / getPacketSize().toFixed()) }
+    const packet = () => (getAppleCount() / getPacketSize().toFixed());
 
-    let packetPrice = () => { return (appleCost() * packet()).toFixed(2) }
+    const packetPrice = () => (appleCost() * packet()).toFixed(2);
 
-    let profitMoney = () => { return (getAppleCount() / 100 * getProfit()).toFixed(2) }
+    const profitMoney = () => (getAppleCount() / 100 * getProfit()).toFixed(2);
 
-    let finalPriceWithProfit = () => { return (parseFloat(packetPrice()) + parseFloat(profitMoney())).toFixed() }
+    const finalPriceWithProfit = () => (parseFloat(packetPrice()) + parseFloat(profitMoney())).toFixed();
 
-    let setData = list => { dataList.push(list) }
+    const setData = list => { dataList.push(list) }
 
-    let getDataList = () => { return dataList }
+    const getDataList = () => dataList;
 
     return {
+        
         setBoxPrice,
         setAppleCount,
         setPacketSize,
